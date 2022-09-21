@@ -1,0 +1,24 @@
+{
+  "name": "tv.superla.radiancehdr",
+  "displayName": "Radiance HDR",
+  "version": "1.0.0",
+  "unity": "2019.4",
+  "description": "Support for the Radiance HDR (RGBE) image format at runtime in Unity.",
+  "keywords": [
+    "Superla",
+    "Radiance",
+    "Image",
+    "Runtime",
+    "HDR",
+    "High Dynamic Range",
+    "High Dynamic Range Imaging",
+    "RGBE"
+  ],
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Superla.tv",
+    "email": "hello@superla.tv",
+    "url": "https://superla.tv"
+  },
+  "homepage": "https://superla.tv"
+}
