@@ -4,14 +4,73 @@
 [![GitHub issues](https://img.shields.io/github/issues/superlatv/RadianceHDRUnity)](https://github.com/superlatv/RadianceHDRUnity/issues)
 [![GitHub license](https://img.shields.io/github/license/superlatv/RadianceHDRUnity)](https://github.com/superlatv/RadianceHDRUnity/blob/main/LICENSE.md)
 
-This package enables the ability to load Radiance HDR (RGBE) images at runtime in Unity. We support RLE and non-RLE encoded images.
+This package enables the ability to load Radiance HDR (RGBE) images
+at runtime in Unity. We support RLE and non-RLE encoded images.
 
 ## Installing
-The easiest way to install is to download and open the [Installer Package](https://package-installer.glitch.me/v1/installer/OpenUPM/tv.superla.radiancehdr?registry=https%3A%2F%2Fpackage.openupm.com&scope=tv.superla)
+The easiest way to install is to download and open the
+[Installer Package](https://package-installer.glitch.me/v1/installer/OpenUPM/tv.superla.radiancehdr?registry=https%3A%2F%2Fpackage.openupm.com&scope=tv.superla).
 
-It runs a script that installs the package via a [scoped registry](https://docs.unity3d.com/Manual/upm-scoped.html).
+It runs a script that installs the package via a
+[scoped registry](https://docs.unity3d.com/Manual/upm-scoped.html).
 
-Afterwards, Radiance HDR for Unity is listed in the *Package Manager* (under *My Registries*) and can be installed and updated from there.
+Afterwards, Radiance HDR for Unity is listed in the*Package Manager*
+(under *My Registries*) and can be installed and updated from there.
+
+<details><summary>Alternative: Install via GIT URL</summary>
+Add Radiance HDR for Unity via Unity's Package Manager
+( Window -> Package Manager ).
+Click the ➕ on the top left and choose *Add package from GIT URL*.
+
+Enter the following URL:
+`https://github.com/superlatv/RadianceHDRUnity.git#upm`
+</details>
+
+---
+## Usage
+```cs
+// Make sure to include the namespace!
+using Superla.RadianceHDR;
+
+...
+// Load the image however you like in the form of a byte array, be it from
+// streaming assets or from the web, etc.
+UnityWebRequest www = UnityWebRequest.Get("path/to/image.hdr");
+www.downloadHandler = new DownloadHandlerBuffer();
+var asyncOp = www.SendWebRequest();
+while (!asyncOp.isDone)
+{
+    await Task.Yield();
+}
+byte[] imageData = www.downloadHandler.data;
+
+// Pass the byte array to the constructor.
+RadianceHDRTexture hdr = RadianceHDRTexture(imageData);
+
+// Retrieve the generated texture.
+Texture2D texture = hdr.texture;
+```
+
+This is the initial version of the API.
+In the future there will be options to create the textures
+just by passing the URL!
+
+---
+## Motivation
+During the course of development for other Unity-based projects,
+we regularly used HDR images for background
+and lighting purposes in our scenes.
+Unity handles editor-time import of HDR images without hassle.
+While exploring options for user-customisable content,
+we were surprised to find the engine did *not* support
+runtime loading of HDR images. We decided that needed to be changed!
+
+## Acknowlegements
+Radiance HDR for Unity was inspired by the excellent
+[three.js](https://threejs.org/) and it's
+[RGBELoader](https://github.com/mrdoob/three.js/blob/dev/examples/jsm/loaders/RGBELoader.js),
+which was in turn adapted from Bruce Walter's
+[C Loader](http://www.graphics.cornell.edu/~bjw/rgbe.html) for RGBE.
 
 ## License
 
