@@ -1,7 +1,7 @@
 {
   "name": "tv.superla.radiancehdr",
   "displayName": "Radiance HDR",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "unity": "2019.4",
   "description": "Support for the Radiance HDR (RGBE) image format at runtime in Unity.",
   "keywords": [
