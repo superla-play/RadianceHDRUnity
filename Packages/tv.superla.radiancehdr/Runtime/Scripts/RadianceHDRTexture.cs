@@ -51,8 +51,8 @@ namespace Superla.RadianceHDR
             }
 
             texture = new Texture2D(header.width, header.height,
-                UnityEngine.Experimental.Rendering.DefaultFormat.HDR,
-                UnityEngine.Experimental.Rendering.TextureCreationFlags.None
+                TextureFormat.RGBA32,
+                false
             );
 
             texture.SetPixels(colorData);
