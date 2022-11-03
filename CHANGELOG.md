@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/superlatv/RadianceHDRUnity/compare/v1.0.1...v1.0.2) (2022-11-03)
+
+
+### Bug Fixes
+
+* **Load:** Use RGBA32 ([5f7748f](https://github.com/superlatv/RadianceHDRUnity/commit/5f7748f0bbf191770510fdfd7c6be985c34a8c0b))
+
 ## [1.0.1](https://github.com/superlatv/RadianceHDRUnity/compare/v1.0.0...v1.0.1) (2022-09-21)
 
 
