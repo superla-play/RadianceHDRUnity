@@ -45,7 +45,7 @@ while (!asyncOp.isDone)
 byte[] imageData = www.downloadHandler.data;
 
 // Pass the byte array to the constructor.
-RadianceHDRTexture hdr = RadianceHDRTexture(imageData);
+RadianceHDRTexture hdr = new RadianceHDRTexture(imageData);
 
 // Retrieve the generated texture.
 Texture2D texture = hdr.texture;
