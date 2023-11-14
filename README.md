@@ -1,8 +1,8 @@
 # Radiance HDR for Unity
 
 [![openupm](https://img.shields.io/npm/v/tv.superla.radiancehdr?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/tv.superla.radiancehdr/)
-[![GitHub issues](https://img.shields.io/github/issues/superlatv/RadianceHDRUnity)](https://github.com/superlatv/RadianceHDRUnity/issues)
-[![GitHub license](https://img.shields.io/github/license/superlatv/RadianceHDRUnity)](https://github.com/superlatv/RadianceHDRUnity/blob/main/LICENSE.md)
+[![GitHub issues](https://img.shields.io/github/issues/superla-play/RadianceHDRUnity)](https://github.com/superla-play/RadianceHDRUnity/issues)
+[![GitHub license](https://img.shields.io/github/license/superla-play/RadianceHDRUnity)](https://github.com/superla-play/RadianceHDRUnity/blob/main/LICENSE.md)
 
 This package enables the ability to load Radiance HDR (RGBE) images
 at runtime in Unity. We support RLE and non-RLE encoded images.
@@ -23,7 +23,7 @@ Add Radiance HDR for Unity via Unity's Package Manager
 Click the ➕ on the top left and choose *Add package from GIT URL*.
 
 Enter the following URL:
-`https://github.com/superlatv/RadianceHDRUnity.git#upm`
+`https://github.com/superla-play/RadianceHDRUnity.git#upm`
 </details>
 
 ---
@@ -45,7 +45,7 @@ while (!asyncOp.isDone)
 byte[] imageData = www.downloadHandler.data;
 
 // Pass the byte array to the constructor.
-RadianceHDRTexture hdr = RadianceHDRTexture(imageData);
+RadianceHDRTexture hdr = new RadianceHDRTexture(imageData);
 
 // Retrieve the generated texture.
 Texture2D texture = hdr.texture;
