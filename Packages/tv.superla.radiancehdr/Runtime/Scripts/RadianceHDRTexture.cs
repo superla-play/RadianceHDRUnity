@@ -16,9 +16,9 @@
 // Adapted from https://github.com/mrdoob/three.js/blob/dev/examples/jsm/loaders/RGBELoader.js
 // & http://www.graphics.cornell.edu/~bjw/rgbe.html, which it is based on.
 
-using UnityEngine;
 using System;
 using System.IO;
+using UnityEngine;
 
 namespace Superla.RadianceHDR
 {
@@ -49,9 +49,8 @@ namespace Superla.RadianceHDR
                     return;
                 }
             }
-
             texture = new Texture2D(header.width, header.height,
-                TextureFormat.RGBA32,
+                TextureFormat.RGB9e5Float,
                 false
             );
 
