@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/superla-play/RadianceHDRUnity/compare/v1.0.2...v1.0.3) (2023-11-14)
+
+
+### Bug Fixes
+
+* **Load:** Use uncompressed HDR format ([996f478](https://github.com/superla-play/RadianceHDRUnity/commit/996f47821145de4520da908a18b41fa548509cb8))
+
 ## [1.0.2](https://github.com/superlatv/RadianceHDRUnity/compare/v1.0.1...v1.0.2) (2022-11-03)
 
 
