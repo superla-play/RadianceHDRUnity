@@ -51,10 +51,6 @@ RadianceHDRTexture hdr = new RadianceHDRTexture(imageData);
 Texture2D texture = hdr.texture;
 ```
 
-This is the initial version of the API.
-In the future there will be options to create the textures
-just by passing the URL!
-
 ---
 ## Motivation
 During the course of development for other Unity-based projects,
@@ -74,7 +70,7 @@ which was in turn adapted from Bruce Walter's
 
 ## License
 
-Copyright (c) 2022 Superla.tv, All Rights Reserved.
+Copyright (c) 2022-2024 Superla.tv, All Rights Reserved.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use files in this repository except in compliance with the License.
